@@ -1,0 +1,14 @@
+D:\Slide\Sem_8\Exe2\Wetrip\Wetrip.Data\bin\Debug\net8.0\Wetrip.Data.deps.json
+D:\Slide\Sem_8\Exe2\Wetrip\Wetrip.Data\bin\Debug\net8.0\Wetrip.Data.runtimeconfig.json
+D:\Slide\Sem_8\Exe2\Wetrip\Wetrip.Data\bin\Debug\net8.0\Wetrip.Data.dll
+D:\Slide\Sem_8\Exe2\Wetrip\Wetrip.Data\bin\Debug\net8.0\Wetrip.Data.pdb
+D:\Slide\Sem_8\Exe2\Wetrip\Wetrip.Data\obj\Debug\net8.0\Wetrip.Data.csproj.AssemblyReference.cache
+D:\Slide\Sem_8\Exe2\Wetrip\Wetrip.Data\obj\Debug\net8.0\Wetrip.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Slide\Sem_8\Exe2\Wetrip\Wetrip.Data\obj\Debug\net8.0\Wetrip.Data.AssemblyInfoInputs.cache
+D:\Slide\Sem_8\Exe2\Wetrip\Wetrip.Data\obj\Debug\net8.0\Wetrip.Data.AssemblyInfo.cs
+D:\Slide\Sem_8\Exe2\Wetrip\Wetrip.Data\obj\Debug\net8.0\Wetrip.Data.csproj.CoreCompileInputs.cache
+D:\Slide\Sem_8\Exe2\Wetrip\Wetrip.Data\obj\Debug\net8.0\Wetrip.Data.dll
+D:\Slide\Sem_8\Exe2\Wetrip\Wetrip.Data\obj\Debug\net8.0\refint\Wetrip.Data.dll
+D:\Slide\Sem_8\Exe2\Wetrip\Wetrip.Data\obj\Debug\net8.0\Wetrip.Data.pdb
+D:\Slide\Sem_8\Exe2\Wetrip\Wetrip.Data\obj\Debug\net8.0\Wetrip.Data.genruntimeconfig.cache
+D:\Slide\Sem_8\Exe2\Wetrip\Wetrip.Data\obj\Debug\net8.0\ref\Wetrip.Data.dll

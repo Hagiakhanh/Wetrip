@@ -1,0 +1,180 @@
+﻿{
+   "CodeGenerationMode": 4,
+   "ContextClassName": "WeTripContext",
+   "ContextNamespace": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": true,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Entities",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "Wetrip.Data",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 2,
+   "SelectedToBeGenerated": 0,
+   "T4TemplatePath": null,
+   "Tables": [
+      {
+         "Name": "[dbo].[Comments]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CompanionTrip]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ConfirmedGroup]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ConfirmedGroupMember]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ConfirmedGroupMessage]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ConfirmedGroupMessageLocation]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ConfirmedGroupMessageMedia]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ConfirmedGroupMessageText]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[FlightBookings]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Flights]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Hashtags]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[HotelBookings]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Hotels]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Likes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Notifications]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PostHashtags]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PostMedia]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Posts]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Roles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SavedPosts]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SharedPosts]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TaggedUsers]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TemporaryGroup]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TemporaryGroupMember]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TemporaryGroupMessage]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TemporaryGroupMessageLocation]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TemporaryGroupMessageMedia]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TemporaryGroupMessageText]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TourGuideBookings]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TourGuides]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Transactions]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserFollows]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Users]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Wallet]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": null,
+   "UncountableWords": null,
+   "UseAsyncStoredProcedureCalls": true,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDatabaseNamesForRoutines": true,
+   "UseDateOnlyTimeOnly": true,
+   "UseDbContextSplitting": false,
+   "UseDecimalDataAnnotationForSprocResult": true,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UsePrefixNavigationNaming": false,
+   "UseSchemaFolders": false,
+   "UseSchemaNamespaces": false,
+   "UseSpatial": false,
+   "UseT4": false,
+   "UseT4Split": false
+}
