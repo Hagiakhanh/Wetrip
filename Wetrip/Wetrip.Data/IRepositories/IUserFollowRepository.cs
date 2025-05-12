@@ -10,5 +10,6 @@ namespace Wetrip.Data.IRepositories
 {
     public interface IUserFollowRepository : IGenericRepository<UserFollow>
     {
+        Task<UserFollow> GetAsync(int followerId, int followingId);
     }
 }
