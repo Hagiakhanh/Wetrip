@@ -18,23 +18,15 @@ namespace Wetrip.API.Controllers
 
         // POST /api/follows/{userId}/follow
         [HttpPost("{userId}/follow")]
-        public async Task<IActionResult> Follow(int userId)
+        public async Task<IActionResult> ToggleFollow(int userId)
         {
-            // sau nay thay bang CurrentUserService
+            // sau dung CurrentUserService
             var followerId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
 
-            await _userFollowService.FollowAsync(followerId, userId);
-            return NoContent();
-        }
+            bool isNowFollowing = await _userFollowService.ToggleFollowAsync(followerId, userId);
 
-        // DELETE /api/follows/{userId}/follow
-        [HttpDelete("{userId}/follow")]
-        public async Task<IActionResult> Unfollow(int userId)
-        {
-            var followerId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
-
-            await _userFollowService.UnfollowAsync(followerId, userId);
-            return NoContent();
+            // Trả về trạng thái hiện tại để UI biết nút nên hiển thị Follow hay Unfollow
+            return Ok(new { isFollowing = isNowFollowing });
         }
     }
 }

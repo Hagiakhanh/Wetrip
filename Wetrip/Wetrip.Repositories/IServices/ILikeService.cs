@@ -8,5 +8,6 @@ namespace Wetrip.Service.IServices
 {
     public interface ILikeService
     {
+        Task<bool> ToggleLikeAsync(int userLikedId, int postId);
     }
 }

@@ -21,25 +21,20 @@ namespace Wetrip.Service.Services
             _unitOfWork = unitOfWork;
         }
 
-        public async Task FollowAsync(int followerId, int followingId)
+        public async Task<bool> ToggleFollowAsync(int followerId, int followingId)
         {
             if (followerId == followingId)
                 throw new InvalidOperationException("Không thể follow chính mình.");
 
-            var existing = await _userFollowRepo.GetAsync(followerId, followingId);
-            if (existing != null)
-            {
-                if (existing.IsActive)
-                    throw new InvalidOperationException("Đã đang follow người này.");
+            // (Tuỳ) kiểm tra target user có tồn tại không
+            /*var target = await _userRepo.GetByIdAsync(followingId);
+            if (target == null)
+                throw new InvalidOperationException("User không tồn tại.");*/
 
-                // Re-activate
-                existing.IsActive = true;
-                existing.FollowedAt = DateOnly.FromDateTime(DateTime.UtcNow);
-                existing.UnfollowedAt = null;
-                await _userFollowRepo.UpdateAsync(existing);
-            }
-            else
+            var existing = await _userFollowRepo.GetAsync(followerId, followingId);
+            if (existing == null)
             {
+                // chưa từng follow → tạo mới
                 var uf = new UserFollow
                 {
                     FollowerId = followerId,
@@ -48,21 +43,28 @@ namespace Wetrip.Service.Services
                     IsActive = true
                 };
                 await _userFollowRepo.InsertAsync(uf);
+                await _unitOfWork.SaveChanges();
+                return true;
             }
-
-            await _unitOfWork.SaveChanges();
-        }
-
-        public async Task UnfollowAsync(int followerId, int followingId)
-        {
-            var existing = await _userFollowRepo.GetAsync(followerId, followingId);
-            if (existing == null || !existing.IsActive)
-                throw new InvalidOperationException("Chưa follow hoặc đã unfollow rồi.");
-
-            existing.IsActive = false;
-            existing.UnfollowedAt = DateOnly.FromDateTime(DateTime.UtcNow);
-            await _userFollowRepo.UpdateAsync(existing);
-            await _unitOfWork.SaveChanges();
+            else if (!existing.IsActive)
+            {
+                // đã unfollow trước đó → re-activate
+                existing.IsActive = true;
+                existing.FollowedAt = DateOnly.FromDateTime(DateTime.UtcNow);
+                existing.UnfollowedAt = null;
+                await _userFollowRepo.UpdateAsync(existing);
+                await _unitOfWork.SaveChanges();
+                return true;
+            }
+            else
+            {
+                // đang follow → bỏ follow
+                existing.IsActive = false;
+                existing.UnfollowedAt = DateOnly.FromDateTime(DateTime.UtcNow);
+                await _userFollowRepo.UpdateAsync(existing);
+                await _unitOfWork.SaveChanges();
+                return false;
+            }
         }
     }
 }
