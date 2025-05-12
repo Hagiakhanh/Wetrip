@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,13 @@ namespace Wetrip.Data.Repositories
     {
         public UserFollowRepository(WeTripContext context) : base(context)
         {
+        }
+
+        public async Task<UserFollow> GetAsync(int followerId, int followingId)
+        {
+            return await _context.UserFollows
+                .SingleOrDefaultAsync(uf => uf.FollowerId == followerId
+                                         && uf.FollowingId == followingId);
         }
     }
 }
