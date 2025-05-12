@@ -10,5 +10,6 @@ namespace Wetrip.Data.IRepositories
 {
     public interface ILikeRepository : IGenericRepository<Like>
     {
+        Task<Like> GetAsync(int postId, int userLikedId);
     }
 }
