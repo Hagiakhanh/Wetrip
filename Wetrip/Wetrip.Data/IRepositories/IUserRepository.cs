@@ -10,5 +10,8 @@ namespace Wetrip.Data.IRepositories
 {
     public interface IUserRepository : IGenericRepository<User>
     {
+        public Task<User> GetUserByPhone(string phone);
+        public Task<User> GetUserByEmail(string email);
+        public Task<User> GetUserByRequestId(string requestId);
     }
 }

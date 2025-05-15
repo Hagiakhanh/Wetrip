@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Wetrip.API;
 using Wetrip.Data.DBContext;
+using Wetrip.Services.Helpers;
 
 namespace Wetrip.Api
 {
@@ -57,6 +58,8 @@ namespace Wetrip.Api
                                .ToArray();
 
             builder.Services.AddAutoMapper(assemblies);
+            
+            builder.Services.Configure<SpeedSMSApiSettings>(builder.Configuration.GetSection("SpeedSMSApi"));
 
             var app = builder.Build();
 

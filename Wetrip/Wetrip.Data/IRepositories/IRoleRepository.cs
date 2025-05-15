@@ -10,5 +10,6 @@ namespace Wetrip.Data.IRepositories
 {
     public interface IRoleRepository : IGenericRepository<Role>
     {
+        public Task<Role?> GetRoleByName(string roleName);
     }
 }

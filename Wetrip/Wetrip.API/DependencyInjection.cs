@@ -16,12 +16,12 @@ namespace Wetrip.API
             services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
             services.AddScoped<ICommentRepository, CommentRepository>();
             services.AddScoped<ICompanionTripRepository, CompanionTripRepository>();
-            services.AddScoped<IConfirmedGroupMemberRepository,ConfirmedGroupMemberRepository>();
-            services.AddScoped<IConfirmedGroupMessageLocationRepository,ConfirmedGroupMessageLocationRepository>();
-            services.AddScoped<IConfirmedGroupMessageMediumRepository,ConfirmedGroupMessageMediumRepository>();
-            services.AddScoped<IConfirmedGroupMessageRepository,ConfirmedGroupMessageRepository>();
-            services.AddScoped<IConfirmedGroupMessageTextRepository,ConfirmedGroupMessageTextRepository>();
-            services.AddScoped<IConfirmedGroupRepository,ConfirmedGroupRepository>();
+            services.AddScoped<IConfirmedGroupMemberRepository, ConfirmedGroupMemberRepository>();
+            services.AddScoped<IConfirmedGroupMessageLocationRepository, ConfirmedGroupMessageLocationRepository>();
+            services.AddScoped<IConfirmedGroupMessageMediumRepository, ConfirmedGroupMessageMediumRepository>();
+            services.AddScoped<IConfirmedGroupMessageRepository, ConfirmedGroupMessageRepository>();
+            services.AddScoped<IConfirmedGroupMessageTextRepository, ConfirmedGroupMessageTextRepository>();
+            services.AddScoped<IConfirmedGroupRepository, ConfirmedGroupRepository>();
             services.AddScoped<IFlightBookingRepository, FlightBookingRepository>();
             services.AddScoped<IFlightRepository, FlightRepository>();
             services.AddScoped<IHashtagRepository, HashtagRepository>();
@@ -35,7 +35,7 @@ namespace Wetrip.API
             services.AddScoped<IRoleRepository, RoleRepository>();
             services.AddScoped<ISavedPostRepository, SavedPostRepository>();
             services.AddScoped<ISharedPostRepository, SharedPostRepository>();
-            services.AddScoped<ITaggedUserRepository, TaggedUserRepository>(); 
+            services.AddScoped<ITaggedUserRepository, TaggedUserRepository>();
             services.AddScoped<ITemporaryGroupMemberRepository, TemporaryGroupMemberRepository>();
             services.AddScoped<ITemporaryGroupMessageLocationRepository, TemporaryGroupMessageLocationRepository>();
             services.AddScoped<ITemporaryGroupMessageMediumRepository, TemporaryGroupMessageMediumRepository>();
@@ -84,6 +84,7 @@ namespace Wetrip.API
             services.AddScoped<IUserFollowService, UserFollowService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IWalletService, WalletService>();
+            services.AddScoped<ISmsService, SmsService>();
 
             return services;
         }
